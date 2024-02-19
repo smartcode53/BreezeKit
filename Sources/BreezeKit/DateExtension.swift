@@ -14,6 +14,11 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func toISOString() -> String {
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter.string(from: self)
+    }
+    
     @available(iOS 15, *)
     static var currentDateAndTime = Date.now
 }

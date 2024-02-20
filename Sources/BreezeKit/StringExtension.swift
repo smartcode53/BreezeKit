@@ -27,6 +27,11 @@ public extension String {
         return true
         
     }
+    
+    func toDate(_ string: String) -> Date? {
+        let formatter = ISO8601DateFormatter()
+        return formatter.date(from: string)
+    }
 }
 
 extension String: Error {

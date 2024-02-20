@@ -28,9 +28,9 @@ public extension String {
         
     }
     
-    func toDate(_ string: String) -> Date? {
+    func toDate() -> Date? {
         let formatter = ISO8601DateFormatter()
-        return formatter.date(from: string)
+        return formatter.date(from: self)
     }
 }
 
